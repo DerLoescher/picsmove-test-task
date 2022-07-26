@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
   res.render(path.join(__dirname + "/dist/index.html"));
 });
 
-var server = app.listen(process.env.PORT || 8080, function () {
-  var port = server.address().port;
+let server = app.listen(process.env.PORT || 8080, function () {
+  let port = server.address().port;
   console.log("App now running on port", port);
 });
