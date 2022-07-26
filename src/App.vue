@@ -19,6 +19,7 @@ export default {
       currency: "VGTB",
     };
   },
+  // корзину, валюту и список продуктов переносим в стор
   components: {
     Header,
     List,

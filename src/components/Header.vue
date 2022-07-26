@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
     cart: Array,
     required: true,
@@ -8,6 +8,7 @@ export default {
 
     currency: String,
   },
+  // все данные тянем из стора
   data() {
     return {
       cartPrice: 0,
@@ -22,18 +23,20 @@ export default {
       this.cartPrice = val;
     },
   },
-}
+};
 </script>
 
 <style scoped>
-  .header {
-    padding: 10px;
-    background: #e5e5e5;
-  }
+.header {
+  padding: 10px;
+  background: #e5e5e5;
+}
 </style>
 
 <template>
+  <!--  template должен быть сверху -->
   <div class="header">
     <h3>Товаров в корзине на: {{ cartPrice }} {{ currency }}</h3>
+    <!-- toFixed() для нормального отображения стоимости корзины -->
   </div>
 </template>
